@@ -1,24 +1,133 @@
-.button, button {
-    background-color: #98ad75;
-    border: 1px solid #cccccc;
-    color: #111111;
-    padding: 12px 20px;
-    text-align: center;
-    font-size: 16px;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* HEADER */
+header {
+    background-color: #27494b; /* mørk grønn */
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    color: white;
+}
+
+/* SEARCH */
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.search-container .button {
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2f6f5e;
+    color: white;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.15s ease, transform 0.08s ease;
 }
 
-.button:hover, button:hover {
-    background-color: #708057;
+.search-container .button:hover {
+    background-color: #24564a;
 }
 
-.button:active, button:active {
-    transform: translateY(1px);
+/* MAIN CONTENT */
+main {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.button:focus, button:focus {
-    outline: 3px solid #9ecaed;
-    outline-offset: 2px;
+/* STORE GRØNNE STEG-BOKSER */
+.step-button {
+    width: 400px;
+    padding: 40px;
+    border-radius: 40px;
+    border: none;
+    font-size: 18px;
+    background-color: #27494b;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.step-button:hover {
+    background-color: #81c784;
+    transform: scale(1.03);
+}
+/* RIGHT SIDE OF HEADER */
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    background-color: #1b3a2f;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* SIDE MENU */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #2f6f5e;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.side-menu a:hover {
+    background-color: #24564a;
+}
+
+/* ACTIVE STATE */
+.side-menu.active {
+    right: 0;
 }
