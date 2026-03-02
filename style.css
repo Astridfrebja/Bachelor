@@ -25,6 +25,10 @@ header h1 {
     font-size: 22px;
 }
 
+button {
+    font-family: inherit;
+}
+
 .right-menu {
     display: flex;
     align-items: center;
@@ -87,15 +91,36 @@ header h1 {
     display: flex;
 }
 
-
 main {
-    font-family: "Times New Roman", Times, serif;
-    padding: 80px 80px;
+    padding: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 100px;
+    align-items: start;
 }
 
+/* VENSTRE KOLONNE */
+.flow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* HØYRE KOLONNE */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 120px; /* matcher høyden mellom boblene */
+}
+
+/* INFO-BOX */
+.info-box {
+    background-color: #d9e6d9;
+    padding: 50px;
+    border-radius: 6px;
+    font-size: 22px;
+    max-width: 600px;
+}
 
 .step {
     display: flex;
@@ -149,4 +174,71 @@ main {
 .step-button:hover {
     background-color: #1f3839;
     transform: scale(1.03);
+}
+.subpage {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subpage h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.subpage hr {
+    width: 80%;
+    border: none;
+    border-top: 1px solid #999;
+    margin-bottom: 40px;
+}
+
+.intro {
+    font-size: 24px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+/* INFO-BOKS */
+.content-box {
+    background-color: #d9e6d9;
+    padding: 60px;
+    border-radius: 6px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.content-box h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content-box p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* LÆR MER KNAPP */
+.learn-button {
+    display: inline-block;
+    background-color: #b7dcb7;
+    padding: 20px 80px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.learn-button:hover {
+    background-color: #a3cfa3;
+}
+
+/* TILBAKE-LINK */
+.back-link {
+    margin-top: 80px;
+    text-decoration: none;
+    font-size: 18px;
 }
