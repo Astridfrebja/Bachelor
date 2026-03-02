@@ -25,6 +25,11 @@ header h1 {
     font-size: 22px;
 }
 
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 button {
     font-family: inherit;
 }
@@ -32,41 +37,40 @@ button {
 .right-menu {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 150px;
     position: relative;
 }
 
-
-.search-container input {
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: none;
-    width: 220px;
-}
-
-
-.hamburger {
-    width: 30px;
-    height: 22px;
+.hamburger { 
+    position: relative; 
+    color: white; 
+    font-size: 20px; 
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;   
+    gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.hamburger span {
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
+.cheve {
+    display: inline-block;
+    font-size: 16px;      
+    line-height: 1;       
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active .cheve {
+    transform: rotate(180deg);
 }
 
 
 .dropdown-menu {
     position: absolute;
-    top: 60px;
-    right: 0;
+    top: 100%;      
+    left: 0;        
+    margin-top: 8px; 
+    
     background-color: #27494b;
     padding: 20px 30px;
     border-radius: 12px;
@@ -91,6 +95,14 @@ button {
     display: flex;
 }
 
+
+.search-container input {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 220px;
+}
+
 main {
     padding: 80px;
     display: grid;
@@ -99,11 +111,21 @@ main {
     align-items: start;
 }
 
+.page-title {
+    font-size: 32px;
+    margin-bottom: 40px; 
+    grid-column: 1 /-1;
+}
+
 /* VENSTRE KOLONNE */
 .flow {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+.page-title {
+    font-size: 32px;
+    margin-bottom: 40px; 
 }
 
 /* HØYRE KOLONNE */
