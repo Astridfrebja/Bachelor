@@ -67,6 +67,7 @@ button {
 
 .dropdown-menu {
     position: absolute;
+    z-index: 9999; 
     top: 100%;      
     left: 0;        
     margin-top: 8px; 
@@ -103,8 +104,45 @@ button {
     width: 220px;
 }
 
+.search-container {
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background: white;
+    width: 260px;
+
+    border-radius: 8px;          
+    border: 1px solid #ddd;      
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    display: none;
+    flex-direction: column;
+    padding: 6px 0;
+
+    z-index: 9999;
+}
+.search-results div {
+    padding: 12px 20px;   
+    font-size: 15px;
+    cursor: pointer;
+}
+.search-results div:hover {
+    background-color: #cfe0cf;
+}
+
 main {
     padding: 80px;
+}
+
+.page-divider {
+    width: 80%;
+    margin: 20px auto 60px auto;
+    border: none;
+    border-top: 1px solid #999;
 }
 
 .row {
@@ -117,15 +155,17 @@ main {
 }
 
 .arrow {
-    width: 400px;          
+    width: 50%;          
     text-align: center;
     font-size: 24px;
     margin: 10px 0 30px 0;
 }
 
 .page-title {
-    font-size: 32px;
-    margin-bottom: 40px; 
+    font-size: 38px;
+    font-weight: 600; 
+    margin-bottom: 40px;  
+    text-align: center; 
 }
 
 /* INFO-BOX */
@@ -136,6 +176,27 @@ main {
     border-radius: 6px;       
     font-size: 18px;           
     background-color: #d9e6d9;
+    position: relative; 
+    overflow: hidden;
+    transition: all 0.3s ease; 
+}
+
+.info-extra {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.info-box:hover .info-extra {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.info-box:hover {
+    background-color: #cfe0cf;
 }
 
 .step-button {
@@ -168,9 +229,9 @@ main {
 
 .subpage hr {
     width: 80%;
+    margin: 20px auto 60px auto; 
     border: none;
     border-top: 1px solid #999;
-    margin-bottom: 10px;
 }
 
 .intro {

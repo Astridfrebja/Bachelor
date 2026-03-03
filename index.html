@@ -32,8 +32,9 @@
         </div>
 
         <div class="search-container">
-            <input type="search" placeholder="Søk">
-        </div>
+    <input type="search" id="searchInput" placeholder="Søk">
+    <div id="searchResults" class="search-results"></div>
+    </div>
     </div>
 </header>
 
@@ -41,6 +42,7 @@
 <main>
 
     <h2 class="page-title">Hjemmetid og hjemmedød</h2>
+    <hr class="page-divider">
 
     <div class="row">
         <button class="step-button"
@@ -49,8 +51,18 @@
         </button>
 
         <div class="info-box">
+            <div class="info-short">
             Her finner du informasjon om sak x, y, z
         </div>
+
+        <div class="info-extra">
+            Her kan du få mer informasjon om hvordan dokumentasjon foregår for
+            palliativ pasient meldt til kommunen.  
+            Hvem blir informert?  
+            Hva er ditt steg som helsearbeider?  
+            Hvilke rutiner gjelder?
+        </div>
+    </div>
     </div>
 
     <div class="arrow">↓</div>
@@ -61,9 +73,16 @@
             Mottak av pasient
         </button>
 
-        <div class="info-box">
+       <div class="info-box">
+            <div class="info-short">
             Her finner du informasjon om sak x, y, z
         </div>
+
+        <div class="info-extra">
+            Her kan du få mer informasjon hva som skjer etter mottak av pasient.
+            Hva din rolle som helsearbeider er. 
+        </div>
+    </div>
     </div>
 
     <div class="arrow">↓</div>
@@ -75,8 +94,15 @@
         </button>
 
         <div class="info-box">
+            <div class="info-short">
             Her finner du informasjon om sak x, y, z
         </div>
+
+        <div class="info-extra">
+            Her kan du få mer informasjon om forhåndssamtale
+            Hvordan skal disse samtalene dokumenteres
+        </div>
+    </div>
     </div>
 
     <div class="arrow">↓</div>
@@ -88,8 +114,15 @@
         </button>
 
         <div class="info-box">
+            <div class="info-short">
             Her finner du informasjon om sak x, y, z
         </div>
+
+        <div class="info-extra">
+            Her kan du få mer informasjon om hva som skjer etter pasientens død
+            Hvordan skal pårørende være inkludert
+        </div>
+    </div>
     </div>
 
 </main>
