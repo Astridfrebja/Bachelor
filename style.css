@@ -34,6 +34,19 @@ button {
     font-family: inherit;
 }
 
+.main-nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    padding-bottom:4px;
+}
+
+/* underline på aktiv side */
+
+.main-nav a.active{
+    border-bottom:2px solid #4fd1c5;
+}
+
 .right-menu {
     display: flex;
     align-items: center;
@@ -317,4 +330,88 @@ main {
 
 .back-button:hover {
     text-decoration: underline;
+}
+
+/* FOOTER */
+
+.site-footer{
+    background:#0f4a47;
+    color:white;
+    margin-top:120px;
+    padding:70px 40px 30px 40px;
+    position:relative;
+}
+
+/* indre container */
+
+.footer-inner{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:60px;
+}
+
+/* kolonner */
+.footer-col {
+    text-align: center; 
+}
+
+.footer-col h3{
+    color:#4fd1c5;
+    margin-bottom:20px;
+}
+
+.footer-col p{
+    line-height:1.6;
+}
+
+.footer-col ul{
+    list-style:none;
+}
+
+.footer-col li{
+    margin-bottom:10px;
+}
+
+.footer-col a{
+    text-decoration:none;
+    color:white;
+    opacity:0.9;
+}
+
+.footer-col a:hover{
+    opacity:1;
+    text-decoration:underline;
+}
+
+/* nederste linje */
+
+.footer-bottom{
+    text-align:center;
+    margin-top:50px;
+    font-size:14px;
+    opacity:0.7;
+}
+
+/* scroll opp knapp */
+
+.scroll-top{
+    position:absolute;
+    right:40px;
+    bottom:40px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:none;
+    background:#2bbbad;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.scroll-top:hover{
+    background:#24a89a;
+    transform:translateY(-3px);
 }
